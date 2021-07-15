@@ -90,6 +90,8 @@ public class SpectrumIdentificationItem
     protected String massTableRef;
     @XmlAttribute(name = "sample_ref")
     protected String sampleRef;
+    @XmlAttribute(name = "spectraData_ref")
+    protected String spectraDataRef;
     @XmlTransient
      protected Peptide peptide;
      @XmlTransient
@@ -395,5 +397,13 @@ public class SpectrumIdentificationItem
      */
     public List<UserParam> getUserParam() {
         return new FacadeList<UserParam>(this.getParamGroup(), UserParam.class);
+    }
+
+    public String getSpectraDataRef() {
+        return spectraDataRef;
+    }
+
+    public void setSpectraDataRef(String spectraDataRef) {
+        this.spectraDataRef = spectraDataRef;
     }
 }
